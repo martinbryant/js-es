@@ -180,28 +180,6 @@ const getBeers = field => state => {
 
 Example of the usage of array spread in my project [here](https://github.com/martinbryant/beer_engineer/blob/master/src/selectors/selectors.js)
 
-```js
-export const favouriteBeers = (state = {}, action) => {
-    switch (action.type) {
-        case ADD_FAVOURITE:
-            return {
-                ...state,
-                ...action.payload
-            };
-        case DELETE_FAVOURITE:
-            const { [action.payload]: value, ...rest } = state;
-            return rest;
-        case `${"INIT"}${LOAD_FROM_LOCAL_STORAGE_SUCCESS}`:
-            return action.payload;
-
-        default:
-            return state;
-    }
-};
-```
-
-Example of the usage of object spread in my project [here](https://github.com/martinbryant/beer_engineer/blob/master/src/reducers/beer-reducer.js)
-
 ### Modules import/export
 
 ```js
