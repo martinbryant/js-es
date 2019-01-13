@@ -200,7 +200,7 @@ export const favouriteBeers = (state = {}, action) => {
 };
 ```
 
-Example of the usage of object spread in my project [here](https://github.com/martinbryant/beer_engineer/blob/master/src/middleware/normalize-middleware.js)
+Example of the usage of object spread in my project [here](https://github.com/martinbryant/beer_engineer/blob/master/src/reducers/beer-reducer.js)
 
 ### Modules import/export
 
