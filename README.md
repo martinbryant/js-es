@@ -1,30 +1,54 @@
-## Welcome to GitHub Pages
+# Javascript - ES5 and beyond
 
-You can use the [editor on GitHub](https://github.com/martinbryant/js-es/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Javascript ES5(ECMAscript 5) was released in December 2009, which was 10 years after the previous version, ES3.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## ES6/ES2015
 
-### Markdown
+This version was released in June 2015, hence the name ES2015. It was decided that the names for the different version will now coincide with the year of release to make it easier to understand.... maybe.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## ES5 vs ES2015
+
+So now I will go through the major changes between the different versions.
+
+### let and const
+
+In ES5, variables were declared using the `var` keyword. ES2015 saw the introduction of `const` and `let` keywords
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+const highlyMotivated = 'HIGHLY_MOTIVATED'
 ```
+
+The `const` keyword will not be hoisted and cannot reassigned or redeclared.
+
+```markdown
+let highlyMotivated = 'HIGHLY_MOTIVATED'
+```
+
+The `let` keyword will not be hoisted, cannot be redeclared but can be reassigned.
+
+````markdown
+it('return initial state', () => {
+const expected = {}
+const action = {
+type: 'init'
+}
+const callReducer = reducer.favouriteBeers(undefined, action)
+expect(callReducer).toEqual(expected)
+})
+```
+
+### Arrow Functions
+
+### Object/Array Spread
+
+### Object/Array Rest
+
+```markdown
+var moveToLondon = function(){
+getAllThings()
+}
+```
+````
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
