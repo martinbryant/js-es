@@ -6,8 +6,6 @@ Javascript ES5(ECMAscript 5) was released in December 2009, which was 10 years a
 
 This version was released in June 2015, hence the name ES2015. It was decided that the names for the different version will now coincide with the year of release to make it easier to understand... maybe.
 
-## ES2015
-
 So now I will go through examples of the new features and where I have used them in my code.
 
 ### let and const
@@ -73,7 +71,7 @@ const getRandomIds = noOfIds =>
         }, "");
 ```
 
-Example of the usage of arrow functions in my project [here](https://github.com/martinbryant/beer_engineer/blob/master/src/middleware/beer-middleware.js)
+Example of the usage of template literals in my project [here](https://github.com/martinbryant/beer_engineer/blob/master/src/middleware/beer-middleware.js)
 
 ### Implicit Function Returns
 
@@ -227,6 +225,30 @@ const Loading = () => {
 export default Loading;
 ```
 
-Example of the usage of object spread in my project [here](https://github.com/martinbryant/beer_engineer/blob/master/src/components/loading.js)
+Example of the usage of modules in my project [here](https://github.com/martinbryant/beer_engineer/blob/master/src/components/loading.js)
+
+### Classes & Inheritence
+
+```js
+class App extends Component {
+  render() {
+    const { classes } = this.props
+    return (
+        //etc
+```
+
+Example of the usage of classes and inheritence in my project [here](https://github.com/martinbryant/beer_engineer/blob/master/src/App.js)
 
 ### Array Iteration
+
+```js
+for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+for (let i of arr) {
+    console.log(i);
+}
+```
+
+I do not have any examples of using array iteration as I prefer to use `map`, `filter` and `reduce` to operate on arrays
